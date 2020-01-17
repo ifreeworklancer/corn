@@ -1,0 +1,25 @@
+@import "config/variables";
+@import "config/placeholders";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "base/body";
+@import "base/btn";
+@import "base/layout";
+@import "base/page";
+
+@import "modules/forms";
+@import "modules/modal";
+@import "modules/breadcrumb";
+
+@import "layout/header";
+@import "layout/intro";
+@import "layout/cases";
+@import "layout/services";
+@import "layout/blog";
+@import "layout/footer";
+
+@import "single/single-services";
+
+@import "page/page-contacts";
+@import "page/page-article";

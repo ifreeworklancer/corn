@@ -1,0 +1,21 @@
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: #fff;
+
+  .form-control {
+    background: transparent;
+    padding: 10px 15px;
+    height: auto;
+    color: $dark;
+    font-size: 1rem;
+
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder {
+      color: $gray-500;
+    }
+  }
+}

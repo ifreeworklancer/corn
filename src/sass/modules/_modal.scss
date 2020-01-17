@@ -1,0 +1,76 @@
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -250%);
+  background: $secondary;
+  width: 95%;
+  max-width: 480px;
+  padding: 60px 15px 40px;
+  max-height: 95vh;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 500;
+  transition: .5s;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 60px 30px 40px;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    cursor: pointer;
+
+    &:hover {
+
+      .line {
+        background: $primary;
+      }
+    }
+
+    .line {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 2px;
+      background: #fff;
+      transition: .5s;
+
+      &--left {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &--right {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-mask {
+  @extend %pos;
+  position: fixed;
+  background: rgba(#000, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 490;
+  transition: .5s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

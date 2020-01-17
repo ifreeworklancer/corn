@@ -1,0 +1,49 @@
+#article {
+  padding-bottom: 40px;
+
+  .link-more-article {
+    svg {
+      fill: #fff;
+    }
+
+    &:hover {
+
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+}
+
+.article-item {
+  display: block;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: $body-bg;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 30px;
+  }
+
+  &__image {
+    @extend %img;
+    padding-bottom: 56.25%;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    color: $primary;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    font-family: $font-family-base;
+    font-weight: 300;
+    font-size: .875rem;
+  }
+
+  &:hover {
+    color: #fff;
+    background: $secondary;
+  }
+}

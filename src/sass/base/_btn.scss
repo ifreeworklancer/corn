@@ -1,0 +1,36 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $headings-font-family;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: .5s;
+  z-index: 5;
+
+  svg {
+    margin-right: 8px;
+    transition: .5s;
+  }
+  
+  &-primary {
+    color: $dark;
+
+    svg {
+      fill: $dark;
+    }
+
+    &:hover {
+      color: $primary;
+      background: $dark;
+      border-color: $dark;
+      box-shadow: 0 5px 30px rgba(255, 215, 73, 0.3);
+
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+}
